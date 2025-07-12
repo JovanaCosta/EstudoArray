@@ -34,6 +34,8 @@
             nomesArray[8] = "Nina";
             nomesArray[9] = "Lili";
 
+            PrintandoLista(nomesArray);
+
             for (int i = 0; i < 10; i++)
             {
                 if (nomesArray[i] == "Belina")
@@ -47,6 +49,7 @@
 
         public void PrintandoLista(string[] nomesArray)
         {
+            Console.WriteLine("--------- printando array ---------");
             foreach (var nomes in nomesArray)
             {
                 Console.WriteLine(nomes);
