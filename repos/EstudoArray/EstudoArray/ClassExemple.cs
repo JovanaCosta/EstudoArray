@@ -9,11 +9,18 @@
 
 
         // Contrutor
+        public ClassExemple()
+        {
+
+        }
+
+        // Contrutor com parametro
         public ClassExemple(int atributo1, string atributo2)
         {
             Atributo1 = atributo1;
             Atributo2 = atributo2;
         }
+
 
 
         // Metodo sem retorno (void)
@@ -37,7 +44,16 @@
 
         // ******* Exemplos Gerais *******
 
-        public void Array()
+        public void PrintandoLista(int[] meuArray)
+        {
+            foreach (var numero in meuArray)
+            {
+                // Mostrando/Printando no Console 
+                Console.WriteLine(numero);
+            }
+        }
+
+        public void ExecuteArray()
         {
             //Criando array com 10 posicoes
             var meuArray = new int[10];
@@ -51,11 +67,14 @@
             {
                 if (meuArray[i] == 22)
                 {
+                    // Removendo do array
                     meuArray[i] = 0;
-                    //meuArray[i] = "";
                 }
-
             }
+
+            //Chamando outro metodo
+            PrintandoLista(meuArray);
         }
+
     }
 }

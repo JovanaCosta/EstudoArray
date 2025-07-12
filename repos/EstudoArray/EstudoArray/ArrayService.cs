@@ -41,6 +41,17 @@
                     nomesArray[i] = "";
                 }
             }
+
+            PrintandoLista(nomesArray);
         }
+
+        public void PrintandoLista(string[] nomesArray)
+        {
+            foreach (var nomes in nomesArray)
+            {
+                Console.WriteLine(nomes);
+            }
+        }
+       
     }
 }
