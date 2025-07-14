@@ -1,8 +1,9 @@
 ﻿
 using EstudoArray;
 
-var classExemple = new ArrayService();
-classExemple.Execute();
+var arrayService = new ArrayService();
+arrayService.Execute();
+
 
 
 
