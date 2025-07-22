@@ -5,7 +5,15 @@
         //1- Criar o metodo chamado "CalculandoMaiorNumero" recebendo por parametro 4 numeros
         //2- me dizer qual dos 4 é o maior 
 
-        public void Main(int numero1, int numero2, int numero3, int numero4, int numero5)
+        /* 3- Criar 2 metodos separados
+                Um para calcular o maior numero chamado CalcularMaiorNumero
+                Outro para calcular o menor numero chamado CalcularMenorNumero
+        */
+
+        // SOLID
+        // S - Unica Responsabilidade
+
+        public void Execute(int numero1, int numero2, int numero3, int numero4, int numero5)
         {
             int maior = numero1;
 
@@ -50,7 +58,7 @@
             Console.WriteLine($"O menor número é {menor}");
         }
            
-        //print
+        
     }
 
 
