@@ -13,7 +13,7 @@
         // SOLID
         // S - Unica Responsabilidade
 
-        public void Execute(int numero1, int numero2, int numero3, int numero4, int numero5)
+        public void CalcularMaiorNumero(int numero1, int numero2, int numero3, int numero4, int numero5)
         {
             int maior = numero1;
 
@@ -35,8 +35,10 @@
             }
 
             Console.WriteLine($" O maior numero é: {maior}");
+        }
 
-            //menor
+        public void CalcularMenorNumero(int numero1, int numero2, int numero3, int numero4, int numero5)
+        {
             int menor = numero1;
             if (numero2 < menor)
             {
@@ -57,11 +59,18 @@
             }
             Console.WriteLine($"O menor número é {menor}");
         }
-           
+
+        public void Execute(int numero1, int numero2, int numero3, int numero4, int numero5)
+        {
+            CalcularMaiorNumero(numero1, numero2, numero3, numero4, numero5);
+            CalcularMenorNumero(numero1, numero2, numero3, numero4, numero5);
+
+            //Calcule qual é a soma do numero1 e numero5
+            // e print
+        }
+
         
+
     }
-
-
-
 }
 
