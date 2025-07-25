@@ -1,17 +1,36 @@
-﻿namespace Exercicios
+﻿using System.Runtime.Serialization;
+
+namespace Exercicios
 {
     public class CalculosService
     {
-        //1- Criar o metodo chamado "CalculandoMaiorNumero" recebendo por parametro 4 numeros
-        //2- me dizer qual dos 4 é o maior 
-
-        /* 3- Criar 2 metodos separados
-                Um para calcular o maior numero chamado CalcularMaiorNumero
-                Outro para calcular o menor numero chamado CalcularMenorNumero
-        */
-
         // SOLID
         // S - Unica Responsabilidade
+        public void Execute(int numero1, int numero2, int numero3, int numero4, int numero5)
+        {
+            CalcularMaiorNumero(numero1, numero2, numero3, numero4, numero5);
+            CalcularMenorNumero(numero1, numero2, numero3, numero4, numero5);
+
+            var resultadoSomaNumero = SomaDosNumeros(numero1, numero5);
+
+            SubtrairOsNumeros(numero1, numero3);
+
+            var listaNumeros = new List<int>();
+            listaNumeros.Add(numero1);
+            listaNumeros.Add(numero2);
+            listaNumeros.Add(numero4);
+
+            var listaOrdenada = OrdenandoDeFormaCrescente(listaNumeros);
+            PrintLista(listaOrdenada);
+        }
+
+        private void PrintLista(List<int> listaOrdenada)
+        {
+            foreach (var numero in listaOrdenada)
+            {
+                Console.WriteLine(numero);
+            }
+        }
 
         public void CalcularMaiorNumero(int numero1, int numero2, int numero3, int numero4, int numero5)
         {
@@ -60,17 +79,27 @@
             Console.WriteLine($"O menor número é {menor}");
         }
 
-        public void Execute(int numero1, int numero2, int numero3, int numero4, int numero5)
+        public int SomaDosNumeros(int numero1, int numero5)
         {
-            CalcularMaiorNumero(numero1, numero2, numero3, numero4, numero5);
-            CalcularMenorNumero(numero1, numero2, numero3, numero4, numero5);
+            int resultado = numero1 + numero5;
 
-            //Calcule qual é a soma do numero1 e numero5
-            // e print
+            Console.WriteLine($"A soma é :{resultado}");
+
+            return resultado;
         }
 
-        
+        public void SubtrairOsNumeros(int numero1, int numero3)
+        {
+            int resultado = numero1 - numero3;
+
+            Console.WriteLine($"A subtração é : {resultado}");
+        }
+
+        public List<int> OrdenandoDeFormaCrescente(List<int> listNumeros)
+        {
+            listNumeros.Sort();
+            return listNumeros;
+        }
 
     }
 }
-
