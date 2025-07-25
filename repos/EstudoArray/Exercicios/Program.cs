@@ -1,9 +1,8 @@
-﻿using System;
-using Exercicios;
+﻿using Exercicios;
 
 
-//var exemplo = new Exemplo();
-//exemplo.Execute(4, 6, 10);
+/*var exemplo = new Exemplo();
+exemplo.Execute(4, 6, 10);
 
 var calculoService = new CalculosService();
 calculoService.Execute(35,15,89,90,91);
@@ -15,3 +14,7 @@ numeros.Add(15);
 numeros.Add(20);
 
 calculoService.OrdenandoDeFormaCrescente(numeros);
+*/
+
+var pessoaService = new PessoaService();
+pessoaService.Execute();
