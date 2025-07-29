@@ -17,6 +17,7 @@
             Nome = nome;
         }
 
+
         public void SetSobrenome(string sobrenome)
         {
             Sobrenome = sobrenome;
@@ -41,5 +42,7 @@
         {
             Estrangeira = estrangeira;
         }
+      
     }
+    
 }
